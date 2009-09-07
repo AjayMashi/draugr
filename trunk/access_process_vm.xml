@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<parent id="access_process_vm">
+
+<start name="access_process_vm">
+	<next name="syscall">
+	<name>sys_ptrace</name>
+	<value>26</value>
+	</next>
+
+	<next name="call">
+	<name>arch_ptrace</name>
+	<value>5</value>
+	</next>
+
+	<next name="jmp">
+	<name>ptrace_request</name>
+	<value>-1</value>
+	</next>
+
+	<next name="call">
+	<name>generic_ptrace_peekdata</name>
+	<value>0</value>
+	</next>
+
+	<next name="call">
+	<name>access_process_vm</name>
+	<value>0</value>
+	</next>
+</start>
+
+
+</parent>
