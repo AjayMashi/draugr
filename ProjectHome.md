@@ -1,0 +1,3 @@
+By using /dev/(k)mem or a memory dump, Draugr can be used to access easily in python to this memory, play (read, write, disassemble, search) with it ... and can find system information (processes ...) by different methods.
+
+It can find kernel symbols (pattern matching in a XML file or with EXPORT\_SYMBOL), processes (informations and sections) (by the kernel linked list or bruteforce) and disassemble/dump the memory.
